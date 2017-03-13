@@ -1,0 +1,262 @@
+/*头部容器*/
+#header{
+    width: 100%;
+    height: 30px;
+    background-color: #323232;
+    line-height: 30px;
+}
+#header a{
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Hiragino Sans GB","Microsoft YaHei",SimHei,SimSun,sans-serif;
+    text-decoration: none;
+}
+/*头部logo*/
+.header_logo{
+    width: 58px;
+    height: 18px;
+    margin: 6px 5px 0 30px;
+    float: left;
+}
+/*头部导航栏*/
+.header_nav{
+    float: left;
+}
+.nav_ul{
+    float: left;
+    margin-left: 13px;
+}
+.nav_li{
+    float: left;
+    position: relative;
+}
+.nav_span{
+    padding: 0 10px;
+    margin-right: 10px;
+    color: silver;
+    display: block;
+}
+.nav_li:hover .nav_span{
+    color: #10b041;
+}
+/*社区下拉菜单*/
+.sq_wrap{
+    position: relative;
+    top: -10px;
+    z-index: 200;
+    display: none;
+}
+.arrow_sq{
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 6px solid #fff;
+    border-left: 6px solid transparent;
+    position: absolute;
+    top: -2px;
+    left: 22px;
+    z-index: 200;
+}
+.nav_span_sq{
+    width: 185px;
+    padding: 8px 0;
+    border-radius: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+}
+.nav_span_sq li{
+    margin: 2px 0;
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+}
+.nav_span_sq li:hover{
+    background-color: #e3fae1;
+}
+.nav_span_sq a{
+    font-size: 16px !important;
+    font-weight: normal !important;
+    color: #636363;
+}
+.sq:hover .sq_wrap{
+    display: block;
+}
+
+/*预订下拉菜单*/
+.yd_wrap{
+    position: relative;
+    top: -10px;
+    z-index: 200;
+    display: none;
+}
+.arrow_yd{
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 6px solid #fff;
+    border-left: 6px solid transparent;
+    position: absolute;
+    top: -2px;
+    left: 22px;
+    z-index: 200;
+}
+.nav_span_yd{
+    width: 125px;
+    padding: 8px 0;
+    border-radius: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+}
+.nav_span_yd li{
+    margin: 2px 0;
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+}
+.nav_span_yd li:hover{
+    background-color: #e3fae1;
+}
+.nav_span_yd a{
+    font-size: 16px !important;
+    font-weight: normal !important;
+    color: #636363;
+}
+.yd:hover .yd_wrap{
+    display: block;
+}
+/*旅游论坛下拉菜单*/
+.luntanMenu{
+    width: 570px;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+    position: absolute;
+    top: 0;
+    left: 190px;
+    z-index: 200;
+    display: none;
+}
+.section-title{
+    padding: 8px 0;
+    height: 30px;
+    line-height: 30px;
+}
+.section-title span{
+    font-size: 16px;
+    color: #323232;
+}
+.more{
+    font-size: 14px;
+    float: right;
+    transition: all 0.2s;
+}
+.more:hover{
+    color: #10b041;
+}
+.section-item:first-of-type{
+    border-top-style: solid;
+}
+.section-item{
+    border-top: 1px dashed #ededed;
+    padding-left: 90px;
+    line-height: 26px;
+}
+.section-item dt{
+    float: left !important;
+    margin-left: -90px;
+    padding-top: 8px;
+    font-size: 16px;
+    color: #323232;
+}
+.section-item dd{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.section-item dd a{
+    height: 25px;
+    padding: 5px 5px 0;
+    border-radius: 3px;
+    line-height: 25px;
+    font-size: 14px !important;
+    color: #636363;
+    display: inline-block;
+}
+.section-item dd a:hover{
+    background: #e3fae1;
+}
+.luntan>a:first-of-type{
+    display: block;
+    width: 180px;
+}
+.nav_span_sq li:hover .luntanMenu{
+    display: block;
+}
+/*头部右侧*/
+.header_fun{
+    height: 30px;
+    margin-right: 30px;
+    float: right;
+}
+/*搜索容器*/
+.search{
+    float: left;
+    position: relative;
+}
+.input{
+    width: 0px;
+    height: 20px;
+    padding: 0 0px 0 0px;
+    border-radius: 3px;
+    background-color: #fff;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 3;
+    transition: all 0.2s;
+}
+.input input{
+    width: 168px;
+    height: 20px;
+    padding: 0 23px 0 9px;
+    border: 0;
+    font-size: 14px;
+    outline: none;
+    float: left;
+}
+.search_logo{
+    width: 20px;
+    height: 20px;
+    color: silver;
+    line-height: 20px;
+    position: absolute;
+    top: 5px;
+    right: 0px;
+}
+.search_logo i{
+    position: relative;
+    z-index: 5;
+}
+.search_logo:hover .input{
+    width: 200px;
+}
+/*登录方式容器*/
+.login_wrap{
+    height: 30px;
+    padding-left: 15px;
+    margin-left: 6px;
+    background: url("../img/line2.png") left center no-repeat;
+    float: left;
+}
+.fun_login{
+    padding-left: 10px;
+    color: silver;
+}
+.login_wrap .fun_login:hover{
+    color: #10b041;
+}
