@@ -9,7 +9,8 @@
     <script type="text/javascript">
         $(function () {
             $("#header_wrap").load("header.html");
-            $("#content_wrap").load("content.html");
+            $("#home_header").load("home_header.html");
+            $("#home_menu").load("home_menu.html");
         });
     </script>
 </head>
@@ -17,7 +18,12 @@
 <!--头部-->
 <div id="header_wrap"></div>
 <!--内容-->
-<div id="content_wrap"></div>
+<div id="content_wrap">
+    <!--首页头部-->
+    <div id="home_header"></div>
+    <!--首页导航栏-->
+    <div id="home_menu"></div>
+</div>
 <!--尾部-->
 <div id="footer_wrap"></div>
 </body>
