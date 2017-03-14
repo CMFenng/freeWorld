@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/home_banner.css">
+    <script type="text/javascript" src="library/libs/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="library/js/Animator.js"></script>
+    <script type="text/javascript" src="library/js/suanzi.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $.ajax({
+                url : "json/index/banner.json",
+                success : function (data, staus, jsxhr) {
+                    createImg(data);
+                }
+            })
+            // 创建元素
+            function createImg(result) {
+                for(var i = 0; i < result.length; i++){
+                    var li = document.createElement("li");
+                    var a = document.createElement("a");
+                    a.setAttribute("href", result[i].href);
+                    li.setAttribute("class", "imgLi");
+                    li.setAttribute("style", "background-image:url('" + result[i].imgUrl + "')");
+                    li.appendChild(a);
+                    $(".imgUl").append(li);
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+<div class="home_banner">
+    <div class="bannerImg">
+        <ul class="imgUl"></ul>
+        <p class="btn_arrow prev"><span class="iconfont icon-arrowleft"></span></p>
+        <p class="btn_arrow next"><span class="iconfont icon-arrowright"></span></p>
+    </div>
+</div>
+</body>
+</html>

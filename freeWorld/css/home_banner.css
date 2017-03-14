@@ -1,0 +1,53 @@
+.home_banner{
+    position: relative;
+    height: 420px;
+}
+.bannerImg{
+    width: 1349px;
+    height: 420px;
+    overflow: hidden;
+}
+.imgUl{
+    width: 400%;
+    height: 420px;
+    position: relative;
+    /*top: 0;*/
+    left: 0;
+}
+.imgLi{
+    width: 1349px;
+    height: 420px;
+    float: left;
+}
+.imgLi a{
+    /*width: 100%;*/
+    height: 420px;
+    display: block;
+}
+/*箭头*/
+.btn_arrow{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 138px;
+    height: 100%;
+    cursor: pointer;
+}
+.btn_arrow span{
+    font-size: 54px;
+    line-height: 420px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    opacity: 0.8;
+}
+/*左箭头*/
+.prev{
+    padding-left: 10px;
+    left: 0;
+}
+/*右箭头*/
+.next{
+    right: 0;
+    padding-right: 10px;
+    text-align: right;
+}
