@@ -40,7 +40,10 @@
     margin-top: 30px;
 }
 .home_todaySale_list{
-    /*display: none;*/
+    display: none;
+}
+.home_todaySale_list:first-child{
+    display: block;
 }
 .home_todaySale_item{
     width: 250px;

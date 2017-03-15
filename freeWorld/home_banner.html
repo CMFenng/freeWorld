@@ -28,30 +28,29 @@
                     $(".imgUl").append(li);
                 }
                 // 元素创建完成才开始轮播
-                change();
+//                change();
             }
             function change() {
-                var properties  = {
-                    left : -1349,
-                    left : -1349*2,
-                    left : -1349*3,
-                    left : -1349*2,
-                    left : -1349,
+                $(".imgUl").animate({
+                    left : -1349
+                }, 1000, "linear")
+                .animate({
+                    left : -1349*2
+                }, 1000, "linear")
+                .animate({
+                    left : -1349*3
+                }, 1000, "linear")
+                .animate({
+                    left : -1349*2
+                }, 1000, "linear")
+                .animate({
+                    left : -1349
+                }, 1000, "linear")
+                .animate({
                     left : 0
-                }
-                var options = {
-                    duration : 2000,
-                    easing : "easeOutQuart",
-                    complete : function () {
-
-                    },
-                    progress : function (a, easing, b) {
-                        $(".imgUl").css({
-//                            left :
-                        });
-                    }
-                }
-                $(".imgUl").animate(properties, options);
+                }, 1000, "linear", function () {
+                    change();
+                })
             }
         });
     </script>
