@@ -5,8 +5,9 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/home_banner.css">
     <script type="text/javascript" src="library/libs/jquery-3.1.1.js"></script>
-    <script type="text/javascript" src="library/js/Animator.js"></script>
-    <script type="text/javascript" src="library/js/suanzi.js"></script>
+    <script type="text/javascript" src="library/libs/jquery.easing.1.3.js"></script>
+    <!--<script type="text/javascript" src="library/js/Animator.js"></script>-->
+    <!--<script type="text/javascript" src="library/js/suanzi.js"></script>-->
     <script type="text/javascript">
         $(function () {
             $.ajax({
@@ -26,6 +27,31 @@
                     li.appendChild(a);
                     $(".imgUl").append(li);
                 }
+                // 元素创建完成才开始轮播
+                change();
+            }
+            function change() {
+                var properties  = {
+                    left : -1349,
+                    left : -1349*2,
+                    left : -1349*3,
+                    left : -1349*2,
+                    left : -1349,
+                    left : 0
+                }
+                var options = {
+                    duration : 2000,
+                    easing : "easeOutQuart",
+                    complete : function () {
+
+                    },
+                    progress : function (a, easing, b) {
+                        $(".imgUl").css({
+//                            left :
+                        });
+                    }
+                }
+                $(".imgUl").animate(properties, options);
             }
         });
     </script>
