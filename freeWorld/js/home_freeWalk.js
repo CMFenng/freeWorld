@@ -67,7 +67,7 @@ $(function () {
                 // $contentUlLiADivPriceP_em.after("元起");
 
                 // 将 em 插入类名为 freeWalkPrice 的 p 标签中
-                $infosDiv_priceP.append($priceP_em);
+                $infosDiv_priceP.append($priceP_em).append("元起");
 
                 // 将类名为 freeWalkType 和 freeWalkPrice 的 p 标签插入 div 中
                 $A_infosDiv.append($infosDiv_typeP);
@@ -101,6 +101,60 @@ $(function () {
                 // 将 ul 插入 div.home_freeWalk_content 中
                 $(".home_freeWalk_content").append($contentDiv_contentUlUl);
             }
+
+            // 更多
+            var $contentUlUl_moreLi = $("<li class='more'></li>");
+            var $moreLi_moreTiTleDiv = $("<div class='moreTitles'></div>");
+            var $moreTitleDiv_a = $("<a href='http://z.qyer.com/package/'></a>");
+            var $A_moreTiTleP = $("<p class='moreTitle'>查看更多<br>机酒自由行产品</p>");
+            var $moreTitleP_moreArrowP = $("<p class='moreArrow'><span class='iconfont icon-iconmore'></span></p>");
+            $moreTitleDiv_a.append($A_moreTiTleP);
+            $moreTitleDiv_a.append($moreTitleP_moreArrowP);
+
+            var $moreLi_moreListP = $("<p class='moreList'></p>");
+            var $moreA1 = $("<a>").attr({
+                href : "//z.qyer.com/flights/all_0_0_0_0_0_0_0/?_channel=freetour&_type=channel",
+                target : "_blank"
+            }).text("机票");
+            var $moreA2 = $("<a>").attr({
+                href : "//z.qyer.com/hotels/all_0_0_0_0_0_0_0/?_channel=freetour&_type=channel",
+                target : "_blank"
+            }).text("酒店");
+            var $moreA3 = $("<a>").attr({
+                href : "//z.qyer.com/free/all_0_0_0_0_0_0_0/?_channel=freetour&_type=channel",
+                target : "_blank"
+            }).text("机+酒");
+            var $moreA4 = $("<a>").attr({
+                href : "//z.qyer.com/cruise/all_0_0_0_0_0_0_0/?_channel=freetour&_type=channel",
+                target : "_blank"
+            }).text("邮轮");
+
+            $moreLi_moreListP
+                .append($moreA1).append("&nbsp;&nbsp;|&nbsp;&nbsp;")
+                .append($moreA2).append("&nbsp;&nbsp;|&nbsp;&nbsp;")
+                .append($moreA3).append("&nbsp;&nbsp;|&nbsp;&nbsp;")
+                .append($moreA4);
+
+            $moreLi_moreTiTleDiv.append($moreTitleDiv_a);
+
+            $contentUlUl_moreLi.append($moreLi_moreTiTleDiv);
+            $contentUlUl_moreLi.append($moreLi_moreListP);
+            $contentDiv_contentUlUl.append($contentUlUl_moreLi);
+            $(".home_freeWalk_content").append($contentDiv_contentUlUl);
         }
+        eventRegister();
+    }
+
+    // 事件注册
+    function eventRegister() {
+        $(".moreList a").hover(function () {
+            $(this).css({
+                "text-decoration": "underline",
+            });
+        }, function () {
+            $(this).css({
+                "text-decoration": "none",
+            });
+        });
     }
 })

@@ -56,12 +56,12 @@
 .home_todaySale_item:first-child{
     margin-left: 0;
 }
-/*.home_todaySale_item:hover{
+.home_todaySale_item:hover{
     box-shadow: 0 0 5px rgba(0,0,0,.15);
 }
 .home_todaySale_item:hover .pics img{
     opacity: .7;
-}*/
+}
 .home_todaySale_list a{
     height: 125px;
     text-decoration: none;

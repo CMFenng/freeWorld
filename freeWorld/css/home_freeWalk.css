@@ -74,12 +74,6 @@
     width: 275px;
     height: 183px;
 }
-/*.contentUl .contentUlLiMore{*/
-    /*width: 275px;*/
-    /*height: 267px;*/
-    /*background-color: #33cea0;*/
-    /*!*background-image: linear-gradient(180deg,#61d482,#15cbb3);*!*/
-/*}*/
 .contentUlLiOne .freeWalkPics{
     width: 100%;
     height: 267px;
@@ -157,7 +151,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkitline-clamp: 2;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 .contentUlLiOne .freeWalkTime{
@@ -165,4 +159,46 @@
     padding-top: 5px;
     font-size: 14px;
     color: silver;
+}
+/*更多*/
+.more{
+    width: 275px;
+    height: 267px;
+    background-color: #33cea0;
+    background-image: linear-gradient(180deg,#61d482,#15cbb3);
+}
+/*.moreTitles{}*/
+.moreTitles a{
+    display: block;
+    padding-bottom: 40px;
+    text-decoration: none;
+}
+.moreTitle{
+    padding-top: 46px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+}
+.moreArrow{
+    padding-top: 16px;
+    text-align: center;
+}
+.moreList{
+    padding-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+.moreList a{
+    color: #fff;
+    text-decoration: none;
+}
+.moreArrow{
+    padding-top: 16px;
+    text-align: center;
+}
+.moreArrow span{
+    font-size: 64px;
+    color: #fff;
 }
