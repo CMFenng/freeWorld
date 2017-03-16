@@ -145,7 +145,7 @@
 .contentUlLiItem .freeWalkTitle{
     height: 48px;
     padding: 17px 15px 0;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 24px;
     color: #323232;
     overflow: hidden;
@@ -172,6 +172,12 @@
     display: block;
     padding-bottom: 40px;
     text-decoration: none;
+}
+/*hover效果*/
+.moreTitles a:hover .moreArrow span {
+    background-color: hsla(0,0%,100%,.2);
+    border-radius: 50%;
+    /*box-shadow: 0 0 5px rgba(0,0,0,.2);*/
 }
 .moreTitle{
     padding-top: 46px;

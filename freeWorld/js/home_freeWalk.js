@@ -142,11 +142,13 @@ $(function () {
             $contentDiv_contentUlUl.append($contentUlUl_moreLi);
             $(".home_freeWalk_content").append($contentDiv_contentUlUl);
         }
+        // 需要页面加载完成之后再注册事件
         eventRegister();
     }
 
     // 事件注册
     function eventRegister() {
+        // 下划线
         $(".moreList a").hover(function () {
             $(this).css({
                 "text-decoration": "underline",
@@ -156,5 +158,7 @@ $(function () {
                 "text-decoration": "none",
             });
         });
+
+
     }
 })
