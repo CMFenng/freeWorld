@@ -12,8 +12,22 @@ $(function() {
 	// 处理数据
 	function handleListData(result) {
 		for(var i = 0; i < result.length; i++) {
-			$(".ProductList")
-			.append($("<div>").attr({class: "listUnit"})
+            $(".ProductList").append(
+                $("<div>").attr({class: "listUnit"}).append(
+                    $("<div>").attr({class: "bigCard"}).append(
+                        $("<a>").append(
+                            $("<img>").attr({class: "itemImg", src: result[i].imgurl})
+                        )
+                    ).append(
+                        $("<div>").attr({class: "itemInfo"})
+                    )
+                )
+            )
+
+
+
+
+			$(".ProductList").append(($("<div>").attr({class: "listUnit"})
                 .append($("<div>").attr({class: "bigCard"})
                     .append($("<a>")
                         .append($("<img>").attr({class: "itemImg", src: result[i].imgurl})
@@ -29,22 +43,23 @@ $(function() {
                             .append($("<a>").attr({title: result[i].title, target: "_blank"}).text(result[i].title))
                         )
                         .append($("<ul>")).attr({class : "infoList"})
-                            .append(
-                                function () {
+
+                                (function () {
                                     for(var j = 0; j < result[i].introduce.length; j++){
+                                    $(".infoList").append(
                                         $("li").append(
                                             $("<i>").attr({class : "iconfont icon-star-line"}).text(result[i].introduce[j]).append("<br>")
-                                        )
+                                        ))
                                     }
-                                }
-                            )
+                                })()
+
                         .append($("div")).attr({class : "bigCardPrice"})
                             .append($("<span>")).attr({class : "line"}).text(result[i].oldPrice)
                             .append($("<em>")).text(result[i].newPrice).append("元起")
                         .append($("div")).attr({class : "bigCardBottomBar"}).append($("<a>")).attr({class : "bigCardBtn",target: "_blank"}).text("立即预订")
                     )
                 )
-            )
+            ))
 		}
 	}
 })
