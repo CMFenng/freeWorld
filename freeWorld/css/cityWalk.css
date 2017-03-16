@@ -28,3 +28,48 @@
     float: right;
     font-size: 16px;
 }
+.infoPlace{
+    border: 1px solid #ddd;
+    margin: 12px 0 12px 20px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #636363;
+    padding: 0 5px;
+    text-align: center;
+}
+.infoNum{
+    height: 52px;
+    line-height: 52px;
+    font-size: 14px;
+    color: #666;
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+.infoNum span{
+    color: #00b081;
+    padding: 0 5px 0 7px;
+}
+.itemInfo h2{
+    clear: both;
+    width: 100%;
+    height: 60px;
+    line-height: 30px;
+    font-size: 26px;
+    /*overflow: hidden;*/
+    text-align: left;
+    font-weight: 400;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.itemInfo h2 a{
+    width: 100%;
+    height: 60px;
+    color: #000;
+}

@@ -36,6 +36,10 @@
     position: relative;
     top: 5px;
 }
+.home_freeWalk_tags a{
+    height: 28px;
+    display: block;
+}
 .home_freeWalk_content{
     margin-top: 30px;
     overflow: hidden;

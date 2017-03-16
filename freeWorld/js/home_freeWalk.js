@@ -159,31 +159,23 @@ $(function () {
             });
         });
 
-
-        // 有 bug
-        $(".home_freeWalk_tags li a").hover(function () {
-            $(this).css({
-                color : "#00b081",
-                textDecoration : "underline"
-            })
-        }, function () {
-            $(this).css({
-                color : "#323232",
-                textDecoration:"none"
-            })
-        });
-
         for(var i = 0; i < $(".contentUl").length; i++){
             (function (i) {
-                $(".home_freeWalk_tags li a")[i].onmouseover = function () {
+                $(".home_freeWalk_tags li")[i].onmouseover = function () {
                     $(".contentUl").hide();
-                    // console.log($(".contentUl")[i]);
                     $(".contentUl")[i].style.display = "block";
+                    $(this).css({
+                        color : "#00b081",
+                        borderBottom : "3px solid #16c1a0"
+                    });
+                }
+                $(".home_freeWalk_tags li")[i].onmouseleave = function () {
+                    $(this).css({
+                        color : "#323232",
+                        borderBottom : "none"
+                    });
                 }
             })(i)
         }
-
-
-
     }
 })
