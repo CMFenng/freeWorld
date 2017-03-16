@@ -51,11 +51,20 @@
     margin-top: -20px;
     display: block;
     overflow: hidden;
-    /*display: none;*/
+    display: none;
+}
+.contentUl:first-child{
+    display: block;
 }
 .contentUl li{
     float: left;
     margin: 20px 0 0 20px;
+}
+.contentUl li:hover{
+    box-shadow: 0 0 5px rgba(0,0,0,.15);
+}
+.contentUl li:hover .freeWalkPics img{
+    opacity: .7;
 }
 .contentUl li a{
     cursor: pointer;
@@ -161,7 +170,7 @@
     color: silver;
 }
 /*更多*/
-.more{
+.moreLi{
     width: 275px;
     height: 267px;
     background-color: #33cea0;
@@ -177,7 +186,7 @@
 .moreTitles a:hover .moreArrow span {
     background-color: hsla(0,0%,100%,.2);
     border-radius: 50%;
-    /*box-shadow: 0 0 5px rgba(0,0,0,.2);*/
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
 }
 .moreTitle{
     padding-top: 46px;

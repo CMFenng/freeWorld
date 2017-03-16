@@ -103,7 +103,7 @@ $(function () {
             }
 
             // 更多
-            var $contentUlUl_moreLi = $("<li class='more'></li>");
+            var $contentUlUl_moreLi = $("<li class='moreLi'></li>");
             var $moreLi_moreTiTleDiv = $("<div class='moreTitles'></div>");
             var $moreTitleDiv_a = $("<a href='http://z.qyer.com/package/'></a>");
             var $A_moreTiTleP = $("<p class='moreTitle'>查看更多<br>机酒自由行产品</p>");
@@ -158,6 +158,31 @@ $(function () {
                 "text-decoration": "none",
             });
         });
+
+
+        // 有 bug
+        $(".home_freeWalk_tags li a").hover(function () {
+            $(this).css({
+                color : "#00b081",
+                textDecoration : "underline"
+            })
+        }, function () {
+            $(this).css({
+                color : "#323232",
+                textDecoration:"none"
+            })
+        });
+
+        for(var i = 0; i < $(".contentUl").length; i++){
+            (function (i) {
+                $(".home_freeWalk_tags li a")[i].onmouseover = function () {
+                    $(".contentUl").hide();
+                    // console.log($(".contentUl")[i]);
+                    $(".contentUl")[i].style.display = "block";
+                }
+            })(i)
+        }
+
 
 
     }
