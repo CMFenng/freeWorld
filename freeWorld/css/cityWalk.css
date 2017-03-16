@@ -1,0 +1,30 @@
+.ProductList{
+    width: 100%;
+}
+.listUnit{
+    width: 1160px;
+    margin: 25px auto 0;
+}
+.bigCard{
+    border: 1px solid #33312e;
+    width: 1158px;
+    height: 270px;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: #fff;
+}
+.bigCard a{
+    /*text-decoration: none;*/
+}
+.itemImg{
+    width: 400px;
+    height: 270px;
+    /*display: block;*/
+    /*float: left;*/
+}
+.itemInfo{
+    width: 758px;
+    height: 270px;
+    float: right;
+    font-size: 16px;
+}
