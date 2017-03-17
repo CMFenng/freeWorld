@@ -6,6 +6,7 @@ $(function() {
 		url: "json/citywalk/cityWalkList.json",
 		success: function(data, staus, jqxhr) {
 			handleListData(data);
+            handleListEvent();
 		}
 	});
 
@@ -69,4 +70,25 @@ $(function() {
             )
 		}
 	}
+
+
+	// 事件处理
+    function handleListEvent() {
+        /*头部搜索框*/
+        $(".ipText").focus(function () {
+            $(".autoComplete").show();
+            $(this).css({
+                border : "1px solid #21c09e"
+            })
+        })
+        $(".ipText").blur(function () {
+            $(".autoComplete").hide();
+            $(this).css({
+                border : "none"
+            })
+        })
+
+
+    }
+
 })

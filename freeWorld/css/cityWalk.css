@@ -1,6 +1,164 @@
 .blackBody{
     background-color: #33312e;
 }
+/*二级 header*/
+.cityWalkHeader2{
+    background-color: #fff;
+    border-bottom: 2px solid #45c79f;
+}
+.header2Search{
+    height: 80px;
+    padding: 5px 0;
+}
+.search2Wrap{
+    width: 100%;
+}
+.search2Unit{
+    margin: 0 auto;
+    width: 1160px;
+    padding: 20px 0;
+}
+.header2Logo{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 25px;
+}
+.header2Logo img{
+    width: 118px;
+    height: 34px;
+}
+.header2Searchs{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-left: 60px;
+}
+.ipts{
+    width: 683px;
+    height: 40px;
+}
+.iptsIcons{
+    position: absolute;
+    margin-left: 14px;
+    margin-top: 12px;
+}
+.iptsIcons span{
+    font-size: 18px;
+    color: #bbbbbb;
+}
+.ipText{
+    width: 615px;
+    height: 40px;
+    padding: 0 25px 0 43px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    font-size: 14px;
+    outline: none;
+}
+.autoComplete{
+    width: 650px;
+    border: 1px solid #cccccc;
+    border-top: none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12);
+    position: absolute;
+    z-index: 99;
+    left: 18px;
+    top: 41px;
+    background-color: #fff;
+    display: none;
+}
+.autoComplete li{
+    border-top: 1px solid #f4f4f4;
+    font-size: 16px;
+    line-height: 38px;
+}
+.autoComplete:first-child{
+    border-top: none;
+}
+.autoComplete a{
+    display: block;
+    padding: 0 12px;
+    overflow: hidden;
+    color: #323232;
+    text-decoration: none;
+}
+.autoComplete a em{
+    float: right;
+    font-size: 14px;
+    color: #dbdbdb;
+}
+.autoComplete a .name{
+    float: left;
+    width: 100px;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+}
+.autoComplete a:hover{
+    background-color: #21c09e;
+    color: #fff;
+    cursor: pointer;
+}
+.autoComplete a:hover em{
+    color: #fff;
+}
+.linkUnit{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 65px;
+}
+.linkUnitItem{
+    display: inline-block;
+    vertical-align: middle;
+    height: 26px;
+    line-height: 26px;
+    font-size: 0;
+}
+.linkUnitItem .iconfont{
+    vertical-align: middle;
+    font-size: 18px;
+    color: #45c79f;
+}
+.linkUnitItemText{
+    margin-left: 12px;
+    font-size: 12px;
+    color: #bbbbbb;
+    line-height: 12px;
+    height: 11px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.myOrder{
+    padding-right: 12px;
+    border-right: 1px solid #e6e6e6;
+}
+.collect{
+    margin-left: 12px;
+}
+.linkUnitItem:hover span{
+    color: #45c79f;
+}
+
+
+.search2Unit{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 65px;
+}
+
+
+.header2menu{
+    width: 1160px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+/*列表*/
 .ProductList{
     width: 100%;
 }
