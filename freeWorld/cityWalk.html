@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>CityWalk</title>
+    <link rel="stylesheet" href="library/css/reset.css">
     <link rel="stylesheet" href="css/cityWalk.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_pyoewzkgeh7x2yb9.css">
     <script type="text/javascript" src="library/libs/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="js/cityWalk.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".cityWalkHeader").load("header.html");
+            $(".cityWalkFooter").load("footer.html");
+        });
+    </script>
 </head>
-<body>
+<body class="blackBody">
 <div class="cityWalk">
-    <div class="ProductList">
-
-    </div>
+    <div class="cityWalkHeader"></div>
+    <div class="ProductList"></div>
+    <div class="cityWalkFooter"></div>
 </div>
 </body>
 </html>

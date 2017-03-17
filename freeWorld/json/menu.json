@@ -46,7 +46,8 @@
     },
     {
         "name": "CityWalk",
-        "url": "http://z.qyer.com/citywalk/",
+
+        "url": "cityWalk.html",
         "imgUrl": ""
     }
 ]
