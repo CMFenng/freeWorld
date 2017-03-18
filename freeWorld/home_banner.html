@@ -36,7 +36,7 @@
                     left : -1349*i
                 }
                 var options = {
-                    duration : 1000,
+                    duration : 500,
                     easing : "linear",
                     progress : function (animation, progress, remainingMs) {
                         if (progress == 1){
@@ -93,6 +93,21 @@
                     i = 3;
                 }
                 change(i);
+            })
+            $(".prev").mouseover(function () {
+                $(this).css({
+                    backgroundImage: "linear-gradient(270deg,transparent,rgba(0,0,0,.3))"
+                })
+            })
+            $(".next").mouseover(function () {
+                $(this).css({
+                    backgroundImage: "linear-gradient(90deg,transparent,rgba(0,0,0,.3))"
+                })
+            })
+            $(".btn_arrow").mouseout(function () {
+                $(this).css({
+                    backgroundImage : "none"
+                })
             })
         });
     </script>
