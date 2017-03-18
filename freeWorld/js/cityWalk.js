@@ -87,8 +87,5 @@ $(function() {
                 border : "none"
             })
         })
-
-
     }
-
 })

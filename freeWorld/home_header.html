@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/home_header.css">
+    <script type="text/javascript" src="library/libs/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            /*头部搜索框*/
+            $(".home_header_search_input").focus(function () {
+                $(".home_autoComplete").show();
+            })
+            $(".home_header_search_input").blur(function () {
+                $(".home_autoComplete").hide();
+            })
+        })
+    </script>
 </head>
 <body>
 <!--首页头部-->
@@ -17,6 +29,46 @@
             <p class="home_header_search_p"></p>
             <input type="submit" value="搜索" class="home_header_search_submit">
             <p class="home_header_search_smtxt"><span class="iconfont icon-sousuo1"></span>搜索</p>
+            <div class="home_autoComplete">
+                <ul>
+                    <li>
+                        <a>
+                            <em>热门搜索</em>
+                            <span class="home_completeName">日本</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <em>热门搜索</em>
+                            <span class="home_completeName">清迈</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <em>热门搜索</em>
+                            <span class="home_completeName">海岛</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <em>热门搜索</em>
+                            <span class="home_completeName">法国</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <em>热门搜索</em>
+                            <span class="home_completeName">台湾</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <em>热门搜索</em>
+                            <span class="home_completeName">韩国</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
