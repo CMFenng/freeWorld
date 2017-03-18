@@ -28,30 +28,72 @@
                     $(".imgUl").append(li);
                 }
                 // 元素创建完成才开始轮播
-//                change();
+                autoPlay();
             }
-            function change() {
-                $(".imgUl").animate({
-                    left : -1349
-                }, 1000, "linear")
-                .animate({
-                    left : -1349*2
-                }, 1000, "linear")
-                .animate({
-                    left : -1349*3
-                }, 1000, "linear")
-                .animate({
-                    left : -1349*2
-                }, 1000, "linear")
-                .animate({
-                    left : -1349
-                }, 1000, "linear")
-                .animate({
-                    left : 0
-                }, 1000, "linear", function () {
-                    change();
-                })
+            // 切图
+            function change(i) {
+                var properties = {
+                    left : -1349*i
+                }
+                var options = {
+                    duration : 1000,
+                    easing : "linear",
+                    progress : function (animation, progress, remainingMs) {
+                        if (progress == 1){
+                            isStop = true;
+                        } else {
+                            isStop = false;
+                        }
+                    }
+                }
+                $(".imgUl").animate(properties, options);
             }
+            // 自动播放
+            var timeId;
+            var i = 0;
+            var flag = true;
+            var isStop = true;
+            function autoPlay() {
+                timeId = setInterval(function b() {
+                    i = flag ? ++i : --i;
+                    if(i <= 0){
+                        i = 0;
+                        flag = !flag;
+                    }
+                    if(i >= 3){
+                        i = 3;
+                        flag = !flag;
+                    }
+                    change(i);
+                }, 2000)
+            }
+
+            // 鼠标悬停暂停
+            $(".bannerImg").mouseover(function () {
+                clearInterval(timeId);
+            })
+            // 鼠标移出继续
+            $(".bannerImg").mouseout(function () {
+                autoPlay();
+            })
+
+            // 点击事件
+            $(".prev").click(function () {
+                if(!isStop) return;
+                i--;
+                if(i < 0){
+                    i = 0;
+                }
+                change(i);
+            })
+            $(".next").click(function () {
+                if(!isStop) return;
+                i++;
+                if(i > 3){
+                    i = 3;
+                }
+                change(i);
+            })
         });
     </script>
 </head>
